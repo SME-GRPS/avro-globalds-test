@@ -18,6 +18,10 @@ repositories {
     }
 }
 
+configurations {
+    avro
+}
+
 dependencies {
-    implementation 'com.sonymusic.global.ds:AvroSchemas:1.0-java8-SNAPSHOT'
+    avro group: 'com.sonymusic.global.ds', name: 'AvroSchemas', version: '1.0-java8-SNAPSHOT', transitive: false
 }
