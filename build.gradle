@@ -15,13 +15,12 @@ repositories {
     }
     maven {
         url "https://nexus3t-vpn.smeperforce.com/repository/maven-snapshots/"
+        metadataSources {
+            artifact()
+        }
     }
 }
 
-configurations {
-    avro
-}
-
 dependencies {
-    avro group: 'com.sonymusic.global.ds', name: 'AvroSchemas', version: '1.0-java8-SNAPSHOT', transitive: false
+    implementation 'com.sonymusic.global.ds:AvroSchemas:1.0-java8-SNAPSHOT'
 }
