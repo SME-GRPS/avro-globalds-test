@@ -1,0 +1,23 @@
+plugins {
+    id 'application'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+application {
+    mainClassName = 'Main'
+}
+
+repositories {
+    maven {
+        url "https://nexus3t-vpn.smeperforce.com/repository/maven-public/"
+    }
+    maven {
+        url "https://nexus3t-vpn.smeperforce.com/repository/maven-snapshots/"
+    }
+}
+
+dependencies {
+    implementation 'com.sonymusic.global.ds:AvroSchemas:1.0-java8-SNAPSHOT'
+}
